@@ -1,0 +1,22 @@
+<div class="contact">
+  <form onsubmit="sendEmail(); reset(); return false;">
+
+    <input type="text" id="name" placeholder="Your name.." required>
+    <input type="text" id="email" placeholder="Email ID.." required>
+    <input type="text" id="phone"  placeholder="Enter Mobile No.."required>
+    <textarea id="subject" name="subject" placeholder="Write your enquiry.." style="height:200px"></textarea>
+
+    <input type="submit" value="Send">
+
+  </form>
+</div>
+<script src="script.js"></script>
+
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("6xKcxpS64YWr5KpXz");
+   })();
+</script>
