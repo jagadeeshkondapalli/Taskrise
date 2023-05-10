@@ -1,0 +1,59 @@
+<p style="margin-bottom: 13rem"></p>
+
+<div
+    class="card card-body"
+    style="background-color: #eef; padding: 1rem; border-radius: 1rem"
+>
+    {{#if message}}
+        <div class="alert {{messageClass}}" role="alert">
+            {{message}}
+        </div>
+    {{/if}}
+    <h3>Create New Task</h3>
+    <form action="/todo" method="post">
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input
+                class="form-control"
+                name="title"
+                type="text"
+                placeholder="Title"
+                required
+            />
+        </div>
+        <div class="form-group">
+            <label for="description">Description</label>
+            <input
+                class="form-control"
+                name="description"
+                type="text"
+                placeholder="Description"
+                required
+            />
+        </div>
+        <div style="display: flex; align-items: center; gap: 10rem">
+            <div class="form-group">
+                <label for="dueDate">Due Date</label>
+                <input
+                    class="form-control"
+                    name="dueDate"
+                    type="Date"
+                    placeholder="Select Due date"
+                    required
+                />
+            </div>
+            <div class="form-group">
+                <label for="dueTime">Due Time</label>
+                <input
+                    class="form-control"
+                    name="dueTime"
+                    type="Time"
+                    placeholder="Select Due Time"
+                    required
+                />
+            </div>
+
+        </div>
+        <button type="submit" class="btn btn-dark">Create</button>
+    </form>
+</div>
